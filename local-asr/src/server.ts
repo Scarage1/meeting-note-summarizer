@@ -1,8 +1,8 @@
-import express from "express";
-import multer from "multer";
-import fs from "node:fs";
-import path from "node:path";
-import { env, pipeline } from "@xenova/transformers";
+const express = require("express");
+const multer = require("multer");
+const fs = require("node:fs");
+const path = require("node:path");
+const { env, pipeline } = require("@xenova/transformers");
 
 env.allowLocalModels = true;
 env.backends.onnx.wasm.numThreads = 1; // adjust for CPU
