@@ -53,5 +53,9 @@ app.post("/transcribe", upload.single("file"), async (req, res) => {
   }
 });
 
+
 const PORT = process.env.PORT || 9000;
+// Health check for browser GET /
+app.get("/", (_req, res) => res.send("ASR OK"));
+
 app.listen(PORT, () => console.log(`Local ASR on http://localhost:${PORT}`));
